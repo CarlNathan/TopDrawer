@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2C89701C68FF0E00211018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C896F1C68FF0E00211018 /* main.m */; };
+		ED2C89731C68FF0E00211018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89721C68FF0E00211018 /* AppDelegate.m */; };
+		ED2C897B1C68FF0E00211018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2C897A1C68FF0E00211018 /* Assets.xcassets */; };
+		ED2C897E1C68FF0E00211018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */; };
+		ED2C89891C68FF0E00211018 /* TopDrawerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89881C68FF0E00211018 /* TopDrawerTests.m */; };
+		ED2C89941C68FF0E00211018 /* TopDrawerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89931C68FF0E00211018 /* TopDrawerUITests.m */; };
+		ED2C89A31C68FF4000211018 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89A21C68FF4000211018 /* CoreDataStack.m */; };
+		ED2C89A61C68FF7400211018 /* ColorPallete.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89A51C68FF7400211018 /* ColorPallete.m */; };
+		ED2C89A91C6900BD00211018 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89A81C6900BD00211018 /* ContentViewController.m */; };
+		ED2C89AC1C6900E900211018 /* SavedDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */; };
+		ED2C89AF1C69201500211018 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89AE1C69201500211018 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED2C89851C68FF0E00211018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2C89631C68FF0E00211018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2C896A1C68FF0E00211018;
+			remoteInfo = TopDrawer;
+		};
+		ED2C89901C68FF0E00211018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2C89631C68FF0E00211018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2C896A1C68FF0E00211018;
+			remoteInfo = TopDrawer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED2C896B1C68FF0E00211018 /* TopDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2C896F1C68FF0E00211018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED2C89711C68FF0E00211018 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED2C89721C68FF0E00211018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED2C897A1C68FF0E00211018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED2C897D1C68FF0E00211018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED2C897F1C68FF0E00211018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2C89841C68FF0E00211018 /* TopDrawerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopDrawerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2C89881C68FF0E00211018 /* TopDrawerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopDrawerTests.m; sourceTree = "<group>"; };
+		ED2C898A1C68FF0E00211018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2C898F1C68FF0E00211018 /* TopDrawerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopDrawerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2C89931C68FF0E00211018 /* TopDrawerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopDrawerUITests.m; sourceTree = "<group>"; };
+		ED2C89951C68FF0E00211018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2C89A11C68FF4000211018 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		ED2C89A21C68FF4000211018 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		ED2C89A41C68FF7400211018 /* ColorPallete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPallete.h; sourceTree = "<group>"; };
+		ED2C89A51C68FF7400211018 /* ColorPallete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPallete.m; sourceTree = "<group>"; };
+		ED2C89A71C6900BD00211018 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentViewController.h; path = ../ContentViewController.h; sourceTree = "<group>"; };
+		ED2C89A81C6900BD00211018 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentViewController.m; path = ../ContentViewController.m; sourceTree = "<group>"; };
+		ED2C89AA1C6900E900211018 /* SavedDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedDrawerViewController.h; path = ../SavedDrawerViewController.h; sourceTree = "<group>"; };
+		ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedDrawerViewController.m; path = ../SavedDrawerViewController.m; sourceTree = "<group>"; };
+		ED2C89AD1C69201500211018 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		ED2C89AE1C69201500211018 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED2C89681C68FF0E00211018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C89811C68FF0E00211018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C898C1C68FF0E00211018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2C89621C68FF0E00211018 = {
+			isa = PBXGroup;
+			children = (
+				ED2C896D1C68FF0E00211018 /* TopDrawer */,
+				ED2C89871C68FF0E00211018 /* TopDrawerTests */,
+				ED2C89921C68FF0E00211018 /* TopDrawerUITests */,
+				ED2C896C1C68FF0E00211018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED2C896C1C68FF0E00211018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C896B1C68FF0E00211018 /* TopDrawer.app */,
+				ED2C89841C68FF0E00211018 /* TopDrawerTests.xctest */,
+				ED2C898F1C68FF0E00211018 /* TopDrawerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2C896D1C68FF0E00211018 /* TopDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89A41C68FF7400211018 /* ColorPallete.h */,
+				ED2C89A51C68FF7400211018 /* ColorPallete.m */,
+				ED2C89A11C68FF4000211018 /* CoreDataStack.h */,
+				ED2C89A21C68FF4000211018 /* CoreDataStack.m */,
+				ED2C89711C68FF0E00211018 /* AppDelegate.h */,
+				ED2C89721C68FF0E00211018 /* AppDelegate.m */,
+				ED2C89A71C6900BD00211018 /* ContentViewController.h */,
+				ED2C89A81C6900BD00211018 /* ContentViewController.m */,
+				ED2C89AA1C6900E900211018 /* SavedDrawerViewController.h */,
+				ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */,
+				ED2C89AD1C69201500211018 /* DetailViewController.h */,
+				ED2C89AE1C69201500211018 /* DetailViewController.m */,
+				ED2C897A1C68FF0E00211018 /* Assets.xcassets */,
+				ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */,
+				ED2C897F1C68FF0E00211018 /* Info.plist */,
+				ED2C896E1C68FF0E00211018 /* Supporting Files */,
+			);
+			path = TopDrawer;
+			sourceTree = "<group>";
+		};
+		ED2C896E1C68FF0E00211018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C896F1C68FF0E00211018 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED2C89871C68FF0E00211018 /* TopDrawerTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89881C68FF0E00211018 /* TopDrawerTests.m */,
+				ED2C898A1C68FF0E00211018 /* Info.plist */,
+			);
+			path = TopDrawerTests;
+			sourceTree = "<group>";
+		};
+		ED2C89921C68FF0E00211018 /* TopDrawerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89931C68FF0E00211018 /* TopDrawerUITests.m */,
+				ED2C89951C68FF0E00211018 /* Info.plist */,
+			);
+			path = TopDrawerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED2C896A1C68FF0E00211018 /* TopDrawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2C89981C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawer" */;
+			buildPhases = (
+				ED2C89671C68FF0E00211018 /* Sources */,
+				ED2C89681C68FF0E00211018 /* Frameworks */,
+				ED2C89691C68FF0E00211018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopDrawer;
+			productName = TopDrawer;
+			productReference = ED2C896B1C68FF0E00211018 /* TopDrawer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED2C89831C68FF0E00211018 /* TopDrawerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2C899B1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerTests" */;
+			buildPhases = (
+				ED2C89801C68FF0E00211018 /* Sources */,
+				ED2C89811C68FF0E00211018 /* Frameworks */,
+				ED2C89821C68FF0E00211018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2C89861C68FF0E00211018 /* PBXTargetDependency */,
+			);
+			name = TopDrawerTests;
+			productName = TopDrawerTests;
+			productReference = ED2C89841C68FF0E00211018 /* TopDrawerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED2C898E1C68FF0E00211018 /* TopDrawerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2C899E1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerUITests" */;
+			buildPhases = (
+				ED2C898B1C68FF0E00211018 /* Sources */,
+				ED2C898C1C68FF0E00211018 /* Frameworks */,
+				ED2C898D1C68FF0E00211018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2C89911C68FF0E00211018 /* PBXTargetDependency */,
+			);
+			name = TopDrawerUITests;
+			productName = TopDrawerUITests;
+			productReference = ED2C898F1C68FF0E00211018 /* TopDrawerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED2C89631C68FF0E00211018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Carl Udren";
+				TargetAttributes = {
+					ED2C896A1C68FF0E00211018 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					ED2C89831C68FF0E00211018 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = ED2C896A1C68FF0E00211018;
+					};
+					ED2C898E1C68FF0E00211018 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = ED2C896A1C68FF0E00211018;
+					};
+				};
+			};
+			buildConfigurationList = ED2C89661C68FF0E00211018 /* Build configuration list for PBXProject "TopDrawer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED2C89621C68FF0E00211018;
+			productRefGroup = ED2C896C1C68FF0E00211018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED2C896A1C68FF0E00211018 /* TopDrawer */,
+				ED2C89831C68FF0E00211018 /* TopDrawerTests */,
+				ED2C898E1C68FF0E00211018 /* TopDrawerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED2C89691C68FF0E00211018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C897E1C68FF0E00211018 /* LaunchScreen.storyboard in Resources */,
+				ED2C897B1C68FF0E00211018 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C89821C68FF0E00211018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C898D1C68FF0E00211018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED2C89671C68FF0E00211018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C89AC1C6900E900211018 /* SavedDrawerViewController.m in Sources */,
+				ED2C89731C68FF0E00211018 /* AppDelegate.m in Sources */,
+				ED2C89A91C6900BD00211018 /* ContentViewController.m in Sources */,
+				ED2C89A61C68FF7400211018 /* ColorPallete.m in Sources */,
+				ED2C89701C68FF0E00211018 /* main.m in Sources */,
+				ED2C89A31C68FF4000211018 /* CoreDataStack.m in Sources */,
+				ED2C89AF1C69201500211018 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C89801C68FF0E00211018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C89891C68FF0E00211018 /* TopDrawerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2C898B1C68FF0E00211018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C89941C68FF0E00211018 /* TopDrawerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED2C89861C68FF0E00211018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2C896A1C68FF0E00211018 /* TopDrawer */;
+			targetProxy = ED2C89851C68FF0E00211018 /* PBXContainerItemProxy */;
+		};
+		ED2C89911C68FF0E00211018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2C896A1C68FF0E00211018 /* TopDrawer */;
+			targetProxy = ED2C89901C68FF0E00211018 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2C897D1C68FF0E00211018 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED2C89961C68FF0E00211018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED2C89971C68FF0E00211018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED2C89991C68FF0E00211018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TopDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED2C899A1C68FF0E00211018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TopDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED2C899C1C68FF0E00211018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TopDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TopDrawer.app/TopDrawer";
+			};
+			name = Debug;
+		};
+		ED2C899D1C68FF0E00211018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TopDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TopDrawer.app/TopDrawer";
+			};
+			name = Release;
+		};
+		ED2C899F1C68FF0E00211018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TopDrawerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TopDrawer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ED2C89A01C68FF0E00211018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TopDrawerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Carl-Udren.TopDrawerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TopDrawer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED2C89661C68FF0E00211018 /* Build configuration list for PBXProject "TopDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C89961C68FF0E00211018 /* Debug */,
+				ED2C89971C68FF0E00211018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2C89981C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C89991C68FF0E00211018 /* Debug */,
+				ED2C899A1C68FF0E00211018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED2C899B1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C899C1C68FF0E00211018 /* Debug */,
+				ED2C899D1C68FF0E00211018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED2C899E1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C899F1C68FF0E00211018 /* Debug */,
+				ED2C89A01C68FF0E00211018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED2C89631C68FF0E00211018 /* Project object */;
+}
