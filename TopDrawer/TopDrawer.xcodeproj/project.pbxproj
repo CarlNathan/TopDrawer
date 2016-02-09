@@ -18,6 +18,15 @@
 		ED2C89A91C6900BD00211018 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89A81C6900BD00211018 /* ContentViewController.m */; };
 		ED2C89AC1C6900E900211018 /* SavedDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */; };
 		ED2C89AF1C69201500211018 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89AE1C69201500211018 /* DetailViewController.m */; };
+		ED2C89C31C6929D900211018 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89C21C6929D900211018 /* SourceCell.m */; };
+		ED2C89C61C692A0100211018 /* PreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89C51C692A0100211018 /* PreviewCell.m */; };
+		ED2C89CB1C6934DD00211018 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89CA1C6934DD00211018 /* Source.m */; };
+		ED2C89CE1C693A3E00211018 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89CD1C693A3E00211018 /* ContentItem.m */; };
+		ED2C89D11C693AFC00211018 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D01C693AFC00211018 /* PreviewViewController.m */; };
+		ED2C89D41C69404E00211018 /* SourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D31C69404E00211018 /* SourceViewController.m */; };
+		ED2C89D81C694B8900211018 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D71C694B8900211018 /* DownloadManager.m */; };
+		ED2C89DB1C695C1A00211018 /* SourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89DA1C695C1A00211018 /* SourceModel.m */; };
+		ED2C89DD1C695D8D00211018 /* nyt-t-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,23 @@
 		ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedDrawerViewController.m; path = ../SavedDrawerViewController.m; sourceTree = "<group>"; };
 		ED2C89AD1C69201500211018 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		ED2C89AE1C69201500211018 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED2C89C11C6929D900211018 /* SourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceCell.h; path = ../SourceCell.h; sourceTree = "<group>"; };
+		ED2C89C21C6929D900211018 /* SourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SourceCell.m; path = ../SourceCell.m; sourceTree = "<group>"; };
+		ED2C89C41C692A0100211018 /* PreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewCell.h; path = ../PreviewCell.h; sourceTree = "<group>"; };
+		ED2C89C51C692A0100211018 /* PreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewCell.m; path = ../PreviewCell.m; sourceTree = "<group>"; };
+		ED2C89C91C6934DD00211018 /* Source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Source.h; path = ../Source.h; sourceTree = "<group>"; };
+		ED2C89CA1C6934DD00211018 /* Source.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Source.m; path = ../Source.m; sourceTree = "<group>"; };
+		ED2C89CC1C693A3E00211018 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentItem.h; path = ../ContentItem.h; sourceTree = "<group>"; };
+		ED2C89CD1C693A3E00211018 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentItem.m; path = ../ContentItem.m; sourceTree = "<group>"; };
+		ED2C89CF1C693AFC00211018 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = ../PreviewViewController.h; sourceTree = "<group>"; };
+		ED2C89D01C693AFC00211018 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = ../PreviewViewController.m; sourceTree = "<group>"; };
+		ED2C89D21C69404E00211018 /* SourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceViewController.h; path = ../SourceViewController.h; sourceTree = "<group>"; };
+		ED2C89D31C69404E00211018 /* SourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SourceViewController.m; path = ../SourceViewController.m; sourceTree = "<group>"; };
+		ED2C89D61C694B8900211018 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadManager.h; path = ../DownloadManager.h; sourceTree = "<group>"; };
+		ED2C89D71C694B8900211018 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadManager.m; path = ../DownloadManager.m; sourceTree = "<group>"; };
+		ED2C89D91C695C1A00211018 /* SourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceModel.h; sourceTree = "<group>"; };
+		ED2C89DA1C695C1A00211018 /* SourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceModel.m; sourceTree = "<group>"; };
+		ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nyt-t-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,19 +137,16 @@
 		ED2C896D1C68FF0E00211018 /* TopDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				ED2C89A41C68FF7400211018 /* ColorPallete.h */,
-				ED2C89A51C68FF7400211018 /* ColorPallete.m */,
-				ED2C89A11C68FF4000211018 /* CoreDataStack.h */,
-				ED2C89A21C68FF4000211018 /* CoreDataStack.m */,
-				ED2C89711C68FF0E00211018 /* AppDelegate.h */,
-				ED2C89721C68FF0E00211018 /* AppDelegate.m */,
-				ED2C89A71C6900BD00211018 /* ContentViewController.h */,
-				ED2C89A81C6900BD00211018 /* ContentViewController.m */,
-				ED2C89AA1C6900E900211018 /* SavedDrawerViewController.h */,
-				ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */,
-				ED2C89AD1C69201500211018 /* DetailViewController.h */,
-				ED2C89AE1C69201500211018 /* DetailViewController.m */,
+				ED2C89D51C694B3E00211018 /* DataModel */,
+				ED2C89C81C692A5500211018 /* CustomCells */,
+				ED2C89B21C6922C100211018 /* Color Pallete */,
+				ED2C89B11C6922AC00211018 /* CoreData */,
+				ED2C89B31C6922DA00211018 /* AppDelegate */,
+				ED2C89B41C6922ED00211018 /* ContentViewController */,
+				ED2C89B51C6922FC00211018 /* SavedContentViewController */,
+				ED2C89B61C69230D00211018 /* DetailViewController */,
 				ED2C897A1C68FF0E00211018 /* Assets.xcassets */,
+				ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */,
 				ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */,
 				ED2C897F1C68FF0E00211018 /* Info.plist */,
 				ED2C896E1C68FF0E00211018 /* Supporting Files */,
@@ -155,6 +178,90 @@
 				ED2C89951C68FF0E00211018 /* Info.plist */,
 			);
 			path = TopDrawerUITests;
+			sourceTree = "<group>";
+		};
+		ED2C89B11C6922AC00211018 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89A11C68FF4000211018 /* CoreDataStack.h */,
+				ED2C89A21C68FF4000211018 /* CoreDataStack.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		ED2C89B21C6922C100211018 /* Color Pallete */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89A41C68FF7400211018 /* ColorPallete.h */,
+				ED2C89A51C68FF7400211018 /* ColorPallete.m */,
+			);
+			name = "Color Pallete";
+			sourceTree = "<group>";
+		};
+		ED2C89B31C6922DA00211018 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89711C68FF0E00211018 /* AppDelegate.h */,
+				ED2C89721C68FF0E00211018 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		ED2C89B41C6922ED00211018 /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89A71C6900BD00211018 /* ContentViewController.h */,
+				ED2C89A81C6900BD00211018 /* ContentViewController.m */,
+				ED2C89D21C69404E00211018 /* SourceViewController.h */,
+				ED2C89D31C69404E00211018 /* SourceViewController.m */,
+				ED2C89CF1C693AFC00211018 /* PreviewViewController.h */,
+				ED2C89D01C693AFC00211018 /* PreviewViewController.m */,
+			);
+			name = ContentViewController;
+			sourceTree = "<group>";
+		};
+		ED2C89B51C6922FC00211018 /* SavedContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89AA1C6900E900211018 /* SavedDrawerViewController.h */,
+				ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */,
+			);
+			name = SavedContentViewController;
+			sourceTree = "<group>";
+		};
+		ED2C89B61C69230D00211018 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89AD1C69201500211018 /* DetailViewController.h */,
+				ED2C89AE1C69201500211018 /* DetailViewController.m */,
+			);
+			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		ED2C89C81C692A5500211018 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89C41C692A0100211018 /* PreviewCell.h */,
+				ED2C89C51C692A0100211018 /* PreviewCell.m */,
+				ED2C89C11C6929D900211018 /* SourceCell.h */,
+				ED2C89C21C6929D900211018 /* SourceCell.m */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		ED2C89D51C694B3E00211018 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C89CC1C693A3E00211018 /* ContentItem.h */,
+				ED2C89CD1C693A3E00211018 /* ContentItem.m */,
+				ED2C89C91C6934DD00211018 /* Source.h */,
+				ED2C89CA1C6934DD00211018 /* Source.m */,
+				ED2C89D91C695C1A00211018 /* SourceModel.h */,
+				ED2C89DA1C695C1A00211018 /* SourceModel.m */,
+				ED2C89D61C694B8900211018 /* DownloadManager.h */,
+				ED2C89D71C694B8900211018 /* DownloadManager.m */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +369,7 @@
 			files = (
 				ED2C897E1C68FF0E00211018 /* LaunchScreen.storyboard in Resources */,
 				ED2C897B1C68FF0E00211018 /* Assets.xcassets in Resources */,
+				ED2C89DD1C695D8D00211018 /* nyt-t-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +394,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2C89CE1C693A3E00211018 /* ContentItem.m in Sources */,
+				ED2C89D41C69404E00211018 /* SourceViewController.m in Sources */,
 				ED2C89AC1C6900E900211018 /* SavedDrawerViewController.m in Sources */,
+				ED2C89DB1C695C1A00211018 /* SourceModel.m in Sources */,
+				ED2C89D11C693AFC00211018 /* PreviewViewController.m in Sources */,
 				ED2C89731C68FF0E00211018 /* AppDelegate.m in Sources */,
+				ED2C89CB1C6934DD00211018 /* Source.m in Sources */,
 				ED2C89A91C6900BD00211018 /* ContentViewController.m in Sources */,
+				ED2C89D81C694B8900211018 /* DownloadManager.m in Sources */,
+				ED2C89C31C6929D900211018 /* SourceCell.m in Sources */,
 				ED2C89A61C68FF7400211018 /* ColorPallete.m in Sources */,
 				ED2C89701C68FF0E00211018 /* main.m in Sources */,
 				ED2C89A31C68FF4000211018 /* CoreDataStack.m in Sources */,
+				ED2C89C61C692A0100211018 /* PreviewCell.m in Sources */,
 				ED2C89AF1C69201500211018 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
