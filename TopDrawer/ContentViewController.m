@@ -9,13 +9,17 @@
 #import "ContentViewController.h"
 #import "SourceViewController.h"
 #import "PreviewViewController.h"
+#import "DetailViewController.h"
+#import "ContentItem.h"
+#import "SourceViewController.h"
 
 #define MINIMUM_ITEM_SPACING 2
 #define EDGE_INSET_SYMETRIC 2
 #define HEADER_HEIGHT 20
-#define SOURCE_LAYOUT_HEIGHT 200
+#define SOURCE_LAYOUT_HEIGHT 160
+#define BAR_HEIGHT 56
 
-@interface ContentViewController () <UICollectionViewDelegate>
+@interface ContentViewController () <UICollectionViewDelegate, ParentDelegate, PreviewParentDelegate>
 
 @property (strong, nonatomic) SourceViewController *sourceViewController;
 @property (strong, nonatomic) PreviewViewController *previewViewController;
@@ -31,16 +35,24 @@
 }
 
 - (void) viewDidLayoutSubviews {
-    CGSize size = self.view.bounds.size;
-    self.sourceViewController.view.frame = CGRectMake(0, 0, size.width, SOURCE_LAYOUT_HEIGHT);
-    CGRect sourceFrame = self.sourceViewController.view.frame;
-    self.previewViewController.view.frame = CGRectMake(0, sourceFrame.size.height, size.width, size.height-sourceFrame.size.height);
+    CGSize size = self.view.frame.size;
+    self.sourceViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, SOURCE_LAYOUT_HEIGHT);
+    self.sourceViewController.sourceCollectionView.frame = CGRectMake(0, 0, size.width, SOURCE_LAYOUT_HEIGHT);
+    self.previewViewController.view.frame = CGRectMake(0, SOURCE_LAYOUT_HEIGHT+BAR_HEIGHT, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT);
+    self.previewViewController.contentCollectionView.frame = CGRectMake(0, 0, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT);
+    [self.sourceViewController.sourceCollectionView invalidateIntrinsicContentSize];
+    [self.previewViewController.contentCollectionView invalidateIntrinsicContentSize];
+    self.sourceViewController.sourceCollectionView.pagingEnabled = YES;
+
+
+
     
 }
 
 - (void) prepareSourceView {
     
     self.sourceViewController = [[SourceViewController alloc] init];
+    self.sourceViewController.parent = self;
     [self displayContentController:self.sourceViewController];
     
 }
@@ -48,6 +60,7 @@
 
 - (void) preparePreviewView {
     self.previewViewController = [[PreviewViewController alloc] init];
+    self.previewViewController.previewDelegate = self;
     [self displayContentController:self.previewViewController];
     
 }
@@ -59,5 +72,22 @@
     [content didMoveToParentViewController:self];
 }
 
+- (void) launchDetailController: (ContentItem *) contentItem source: (Source *) source{
+    DetailViewController *detail = [[DetailViewController alloc] init];
+    detail.contentItem = contentItem;
+    detail.source = source;
+    [self.navigationController pushViewController:detail animated:YES];
+}
+
+#pragma Mark -- Child view controller Delegates
+
+- (void) sourcesDidChange:(Source *)source{
+    
+    [self.previewViewController updateContentDataForSource:source];
+}
+
+- (void) contentWasSeleted: (ContentItem *) item source: (Source *) source{
+    [self launchDetailController:item source:source];
+}
 
 @end

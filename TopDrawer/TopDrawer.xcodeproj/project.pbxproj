@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1AE72F1C6A4BA100D19A00 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE72E1C6A4BA100D19A00 /* HeaderView.m */; };
+		ED1AE7321C6A6C4900D19A00 /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7311C6A6C4900D19A00 /* SideView.m */; };
+		ED1AE7361C6A712700D19A00 /* SavedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7351C6A712700D19A00 /* SavedCollectionViewController.m */; };
+		ED1AE7391C6A728300D19A00 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7371C6A728300D19A00 /* Model.xcdatamodeld */; };
+		ED1AE73C1C6A97E700D19A00 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE73B1C6A97E700D19A00 /* PreviewView.m */; };
+		ED1AE7481C6AF54300D19A00 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7471C6AF54300D19A00 /* ContentItem.m */; };
+		ED1AE7501C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE74D1C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.m */; };
+		ED1AE7511C6AF60700D19A00 /* SavedContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE74F1C6AF60700D19A00 /* SavedContentItem.m */; };
 		ED2C89701C68FF0E00211018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C896F1C68FF0E00211018 /* main.m */; };
 		ED2C89731C68FF0E00211018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89721C68FF0E00211018 /* AppDelegate.m */; };
 		ED2C897B1C68FF0E00211018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2C897A1C68FF0E00211018 /* Assets.xcassets */; };
@@ -21,7 +29,6 @@
 		ED2C89C31C6929D900211018 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89C21C6929D900211018 /* SourceCell.m */; };
 		ED2C89C61C692A0100211018 /* PreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89C51C692A0100211018 /* PreviewCell.m */; };
 		ED2C89CB1C6934DD00211018 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89CA1C6934DD00211018 /* Source.m */; };
-		ED2C89CE1C693A3E00211018 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89CD1C693A3E00211018 /* ContentItem.m */; };
 		ED2C89D11C693AFC00211018 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D01C693AFC00211018 /* PreviewViewController.m */; };
 		ED2C89D41C69404E00211018 /* SourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D31C69404E00211018 /* SourceViewController.m */; };
 		ED2C89D81C694B8900211018 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D71C694B8900211018 /* DownloadManager.m */; };
@@ -47,6 +54,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1AE72D1C6A4BA100D19A00 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderView.h; path = ../HeaderView.h; sourceTree = "<group>"; };
+		ED1AE72E1C6A4BA100D19A00 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderView.m; path = ../HeaderView.m; sourceTree = "<group>"; };
+		ED1AE7301C6A6C4900D19A00 /* SideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideView.h; path = ../SideView.h; sourceTree = "<group>"; };
+		ED1AE7311C6A6C4900D19A00 /* SideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideView.m; path = ../SideView.m; sourceTree = "<group>"; };
+		ED1AE7341C6A712700D19A00 /* SavedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCollectionViewController.h; sourceTree = "<group>"; };
+		ED1AE7351C6A712700D19A00 /* SavedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCollectionViewController.m; sourceTree = "<group>"; };
+		ED1AE7381C6A728300D19A00 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ED1AE73A1C6A97E700D19A00 /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewView.h; path = ../PreviewView.h; sourceTree = "<group>"; };
+		ED1AE73B1C6A97E700D19A00 /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewView.m; path = ../PreviewView.m; sourceTree = "<group>"; };
+		ED1AE7461C6AF54300D19A00 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentItem.h; path = ../ContentItem.h; sourceTree = "<group>"; };
+		ED1AE7471C6AF54300D19A00 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentItem.m; path = ../ContentItem.m; sourceTree = "<group>"; };
+		ED1AE74C1C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SavedContentItem+CoreDataProperties.h"; path = "../SavedContentItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		ED1AE74D1C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SavedContentItem+CoreDataProperties.m"; path = "../SavedContentItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		ED1AE74E1C6AF60700D19A00 /* SavedContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedContentItem.h; path = ../SavedContentItem.h; sourceTree = "<group>"; };
+		ED1AE74F1C6AF60700D19A00 /* SavedContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedContentItem.m; path = ../SavedContentItem.m; sourceTree = "<group>"; };
 		ED2C896B1C68FF0E00211018 /* TopDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2C896F1C68FF0E00211018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED2C89711C68FF0E00211018 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,8 +98,6 @@
 		ED2C89C51C692A0100211018 /* PreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewCell.m; path = ../PreviewCell.m; sourceTree = "<group>"; };
 		ED2C89C91C6934DD00211018 /* Source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Source.h; path = ../Source.h; sourceTree = "<group>"; };
 		ED2C89CA1C6934DD00211018 /* Source.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Source.m; path = ../Source.m; sourceTree = "<group>"; };
-		ED2C89CC1C693A3E00211018 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentItem.h; path = ../ContentItem.h; sourceTree = "<group>"; };
-		ED2C89CD1C693A3E00211018 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentItem.m; path = ../ContentItem.m; sourceTree = "<group>"; };
 		ED2C89CF1C693AFC00211018 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = ../PreviewViewController.h; sourceTree = "<group>"; };
 		ED2C89D01C693AFC00211018 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = ../PreviewViewController.m; sourceTree = "<group>"; };
 		ED2C89D21C69404E00211018 /* SourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceViewController.h; path = ../SourceViewController.h; sourceTree = "<group>"; };
@@ -114,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1AE7331C6A6C6C00D19A00 /* SideView */ = {
+			isa = PBXGroup;
+			children = (
+				ED1AE7301C6A6C4900D19A00 /* SideView.h */,
+				ED1AE7311C6A6C4900D19A00 /* SideView.m */,
+			);
+			name = SideView;
+			sourceTree = "<group>";
+		};
 		ED2C89621C68FF0E00211018 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +166,7 @@
 		ED2C896D1C68FF0E00211018 /* TopDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				ED1AE7331C6A6C6C00D19A00 /* SideView */,
 				ED2C89D51C694B3E00211018 /* DataModel */,
 				ED2C89C81C692A5500211018 /* CustomCells */,
 				ED2C89B21C6922C100211018 /* Color Pallete */,
@@ -148,6 +178,7 @@
 				ED2C897A1C68FF0E00211018 /* Assets.xcassets */,
 				ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */,
 				ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */,
+				ED1AE7371C6A728300D19A00 /* Model.xcdatamodeld */,
 				ED2C897F1C68FF0E00211018 /* Info.plist */,
 				ED2C896E1C68FF0E00211018 /* Supporting Files */,
 			);
@@ -225,6 +256,10 @@
 			children = (
 				ED2C89AA1C6900E900211018 /* SavedDrawerViewController.h */,
 				ED2C89AB1C6900E900211018 /* SavedDrawerViewController.m */,
+				ED1AE7341C6A712700D19A00 /* SavedCollectionViewController.h */,
+				ED1AE7351C6A712700D19A00 /* SavedCollectionViewController.m */,
+				ED1AE73A1C6A97E700D19A00 /* PreviewView.h */,
+				ED1AE73B1C6A97E700D19A00 /* PreviewView.m */,
 			);
 			name = SavedContentViewController;
 			sourceTree = "<group>";
@@ -234,6 +269,8 @@
 			children = (
 				ED2C89AD1C69201500211018 /* DetailViewController.h */,
 				ED2C89AE1C69201500211018 /* DetailViewController.m */,
+				ED1AE72D1C6A4BA100D19A00 /* HeaderView.h */,
+				ED1AE72E1C6A4BA100D19A00 /* HeaderView.m */,
 			);
 			name = DetailViewController;
 			sourceTree = "<group>";
@@ -252,8 +289,12 @@
 		ED2C89D51C694B3E00211018 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				ED2C89CC1C693A3E00211018 /* ContentItem.h */,
-				ED2C89CD1C693A3E00211018 /* ContentItem.m */,
+				ED1AE74C1C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.h */,
+				ED1AE74D1C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.m */,
+				ED1AE74E1C6AF60700D19A00 /* SavedContentItem.h */,
+				ED1AE74F1C6AF60700D19A00 /* SavedContentItem.m */,
+				ED1AE7461C6AF54300D19A00 /* ContentItem.h */,
+				ED1AE7471C6AF54300D19A00 /* ContentItem.m */,
 				ED2C89C91C6934DD00211018 /* Source.h */,
 				ED2C89CA1C6934DD00211018 /* Source.m */,
 				ED2C89D91C695C1A00211018 /* SourceModel.h */,
@@ -394,20 +435,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2C89CE1C693A3E00211018 /* ContentItem.m in Sources */,
+				ED1AE73C1C6A97E700D19A00 /* PreviewView.m in Sources */,
 				ED2C89D41C69404E00211018 /* SourceViewController.m in Sources */,
 				ED2C89AC1C6900E900211018 /* SavedDrawerViewController.m in Sources */,
 				ED2C89DB1C695C1A00211018 /* SourceModel.m in Sources */,
 				ED2C89D11C693AFC00211018 /* PreviewViewController.m in Sources */,
 				ED2C89731C68FF0E00211018 /* AppDelegate.m in Sources */,
+				ED1AE7321C6A6C4900D19A00 /* SideView.m in Sources */,
 				ED2C89CB1C6934DD00211018 /* Source.m in Sources */,
 				ED2C89A91C6900BD00211018 /* ContentViewController.m in Sources */,
 				ED2C89D81C694B8900211018 /* DownloadManager.m in Sources */,
+				ED1AE7481C6AF54300D19A00 /* ContentItem.m in Sources */,
+				ED1AE7501C6AF60700D19A00 /* SavedContentItem+CoreDataProperties.m in Sources */,
+				ED1AE7361C6A712700D19A00 /* SavedCollectionViewController.m in Sources */,
 				ED2C89C31C6929D900211018 /* SourceCell.m in Sources */,
 				ED2C89A61C68FF7400211018 /* ColorPallete.m in Sources */,
+				ED1AE72F1C6A4BA100D19A00 /* HeaderView.m in Sources */,
 				ED2C89701C68FF0E00211018 /* main.m in Sources */,
 				ED2C89A31C68FF4000211018 /* CoreDataStack.m in Sources */,
+				ED1AE7511C6AF60700D19A00 /* SavedContentItem.m in Sources */,
 				ED2C89C61C692A0100211018 /* PreviewCell.m in Sources */,
+				ED1AE7391C6A728300D19A00 /* Model.xcdatamodeld in Sources */,
 				ED2C89AF1C69201500211018 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +672,7 @@
 				ED2C899A1C68FF0E00211018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED2C899B1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerTests" */ = {
 			isa = XCConfigurationList;
@@ -632,6 +681,7 @@
 				ED2C899D1C68FF0E00211018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED2C899E1C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawerUITests" */ = {
 			isa = XCConfigurationList;
@@ -640,8 +690,23 @@
 				ED2C89A01C68FF0E00211018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED1AE7371C6A728300D19A00 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED1AE7381C6A728300D19A00 /* Model.xcdatamodel */,
+			);
+			currentVersion = ED1AE7381C6A728300D19A00 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ED2C89631C68FF0E00211018 /* Project object */;
 }

@@ -46,9 +46,12 @@
     for (NSDictionary *content in jsonData[@"results"]) {
         ContentItem *item = [[ContentItem alloc] init];
         item.title = content[@"title"];
+        item.date = content[@"published_date"];
         item.urlString = content[@"url"];
         item.byLine = content[@"byline"];
-        item.imageURLString = content[@"media-metadata"][1][@"url"];
+        if (![content[@"media"] isKindOfClass: [NSString class]]) {
+            item.imageURLString = content[@"media"][0][@"media-metadata"][0][@"url"];
+        }
         [contentList addObject:item];
     }
     return [contentList copy];

@@ -11,6 +11,17 @@
 #import "SourceCell.h"
 #import "SourceModel.h"
 
+@protocol ParentDelegate <NSObject>
+
+- (void) sourcesDidChange: (Source *) source;
+
+@end
+
+
 @interface SourceViewController : UIViewController
+
+@property (weak, nonatomic) id <ParentDelegate> parent;
+@property (strong, nonatomic) UICollectionView *sourceCollectionView;
+
 
 @end
