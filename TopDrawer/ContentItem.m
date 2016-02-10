@@ -10,6 +10,16 @@
 
 @implementation ContentItem
 
++ (instancetype) contentItemFromSavedContentItem: (SavedContentItem *) item{
+    ContentItem *newItem = [[ContentItem alloc] init];
+    newItem.title = item.title;
+    newItem.date = item.date;
+    newItem.byLine = item.byLine;
+    newItem.urlString = item.urlString;
+    newItem.imageURLString = item.imageURLString;
+    
+    return newItem;
+}
 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SavedContentItem.h"
 
 @interface ContentItem : UIView
 
@@ -15,5 +16,7 @@
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *imageURLString;
 @property (strong, nonatomic) NSString *urlString;
+
++ (instancetype) contentItemFromSavedContentItem: (SavedContentItem *) item;
 
 @end

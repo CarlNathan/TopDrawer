@@ -12,6 +12,8 @@
 @interface PreviewView : UIView
 
 @property (strong, nonatomic) SavedContentItem *contentItem;
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIImageView *imageView;
 
 
 + (instancetype) emptyPreviewView;

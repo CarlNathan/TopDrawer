@@ -16,7 +16,7 @@
 #define MINIMUM_ITEM_SPACING 2
 #define EDGE_INSET_SYMETRIC 2
 #define HEADER_HEIGHT 20
-#define SOURCE_LAYOUT_HEIGHT 160
+#define SOURCE_LAYOUT_HEIGHT 40
 #define BAR_HEIGHT 56
 
 @interface ContentViewController () <UICollectionViewDelegate, ParentDelegate, PreviewParentDelegate>
@@ -29,8 +29,8 @@
 @implementation ContentViewController
 
 - (void) viewDidLoad {
-    [self prepareSourceView];
     [self preparePreviewView];
+    [self prepareSourceView];
     
 }
 
@@ -38,8 +38,8 @@
     CGSize size = self.view.frame.size;
     self.sourceViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, SOURCE_LAYOUT_HEIGHT);
     self.sourceViewController.sourceCollectionView.frame = CGRectMake(0, 0, size.width, SOURCE_LAYOUT_HEIGHT);
-    self.previewViewController.view.frame = CGRectMake(0, SOURCE_LAYOUT_HEIGHT+BAR_HEIGHT, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT);
-    self.previewViewController.contentCollectionView.frame = CGRectMake(0, 0, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT);
+    self.previewViewController.view.frame = CGRectMake(0, BAR_HEIGHT + SOURCE_LAYOUT_HEIGHT, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT - BAR_HEIGHT);
+    self.previewViewController.contentCollectionView.frame = CGRectMake(0, 0, size.width, size.height-BAR_HEIGHT - SOURCE_LAYOUT_HEIGHT - BAR_HEIGHT);
     [self.sourceViewController.sourceCollectionView invalidateIntrinsicContentSize];
     [self.previewViewController.contentCollectionView invalidateIntrinsicContentSize];
     self.sourceViewController.sourceCollectionView.pagingEnabled = YES;

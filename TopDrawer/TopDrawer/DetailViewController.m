@@ -65,6 +65,7 @@
     CoreDataStack *defaultStack = [CoreDataStack defaultStack];
     SavedContentItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"SavedContentItem" inManagedObjectContext:defaultStack.managedObjectContext];
     item.title = self.contentItem.title;
+    item.urlString = self.contentItem.urlString;
     item.date = self.contentItem.date;
     item.byLine = self.contentItem.byLine;
     item.imageURLString = self.contentItem.imageURLString;

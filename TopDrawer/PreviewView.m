@@ -17,9 +17,7 @@
 
 @interface PreviewView ()
 
-@property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *byLineLabel;
-@property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UILabel *dateLabel;
 
 @end
@@ -29,10 +27,15 @@
 + (instancetype) emptyPreviewView{
     PreviewView *previewView = [[PreviewView alloc] init];
     previewView.titleLabel  = [[UILabel alloc] init];
+    [previewView addSubview:previewView.titleLabel];
     previewView.byLineLabel = [[UILabel alloc] init];
+    [previewView addSubview:previewView.byLineLabel];
     previewView.dateLabel = [[UILabel alloc] init];
+    [previewView addSubview:previewView.dateLabel];
     previewView.imageView = [[UIImageView alloc] init];
-    
+    [previewView addSubview:previewView.imageView];
+    previewView.backgroundColor = [UIColor whiteColor];
+
     return previewView;
 }
 
@@ -45,7 +48,7 @@
     
 }
 
-- (void) setSavedContentItem:(SavedContentItem *)contentItem {
+- (void) setContentItem:(SavedContentItem *)contentItem {
     _contentItem = contentItem;
     self.titleLabel.text = contentItem.title;
     self.titleLabel.numberOfLines = 0;

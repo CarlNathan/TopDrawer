@@ -70,7 +70,7 @@
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Selected");
     SavedContentItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+    NSLog(@"%@", item.urlString);
     [self.delegate didSelectSavedItem:item];
 }
 
