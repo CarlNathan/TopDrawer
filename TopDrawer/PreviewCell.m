@@ -34,11 +34,11 @@
         _dateLabel = [[UILabel alloc] init];
         
         self.contentView.backgroundColor = [UIColor whiteColor];
-        self.byLineLabel.textColor = [UIColor whiteColor];
+        self.byLineLabel.textColor = [UIColor grayColor];
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.numberOfLines = 2;
         self.contentView.backgroundColor = [UIColor blackColor];
-        self.dateLabel.textColor = [UIColor whiteColor];
+        self.dateLabel.textColor = [UIColor grayColor];
         
         [self.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:18]];
         [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:11]];
