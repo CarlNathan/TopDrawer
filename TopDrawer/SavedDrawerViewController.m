@@ -37,7 +37,7 @@
     CGSize size = self.view.frame.size;
     if (!self.collectionViewIsLowered) {
     self.previewView.frame = CGRectMake(0, BAR_HEIGHT, size.width, size.height - COLLECTION_VIEW_HEIGHT_LOWERED);
-    self.collectionViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, size.height - BAR_HEIGHT);
+    self.collectionViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, size.height - 2 *BAR_HEIGHT);
     } else {
         self.previewView.frame = CGRectMake(0, BAR_HEIGHT, size.width, size.height - COLLECTION_VIEW_HEIGHT_LOWERED);
         self.collectionViewController.view.frame = CGRectMake(0, size.height - COLLECTION_VIEW_HEIGHT_LOWERED, size.width, COLLECTION_VIEW_HEIGHT_LOWERED);
@@ -70,7 +70,8 @@
 - (void) didSelectSavedItem: (SavedContentItem *) item{
     NSLog(@"selected item");
     self.previewView.contentItem = item;
-    [self lowerCollectionView];
+    //[self lowerCollectionView];
+    [self previewWasTapped];
 }
 
 
@@ -79,8 +80,8 @@
 - (void) lowerCollectionView {
     NSLog(@"Lowered");
     if (!self.collectionViewIsLowered) {
-        self.collectionViewIsLowered = YES;
-        [self viewDidLayoutSubviews];
+       // self.collectionViewIsLowered = YES;
+       // [self viewDidLayoutSubviews];
         
     }
 }

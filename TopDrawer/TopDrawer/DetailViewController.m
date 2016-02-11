@@ -25,15 +25,15 @@
 
 - (void) viewDidLoad{
     [self prepareWebView];
-    [self prepareHeaderView];
+    //[self prepareHeaderView];
     [self prepareGestureRecognizers];
-
+    [self prepareSaveButton];
 }
 
 - (void) viewDidLayoutSubviews{
     CGSize size = self.view.bounds.size;
     self.headerView.frame = CGRectMake(0, BAR_HEIGHT, size.width, HEADER_HEIGHT);
-    self.webView.frame = CGRectMake(0, HEADER_HEIGHT + BAR_HEIGHT, size.width, size.height - HEADER_HEIGHT - BAR_HEIGHT);
+    self.webView.frame = CGRectMake(0, BAR_HEIGHT, size.width, size.height - BAR_HEIGHT);
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
 }
 
@@ -43,7 +43,7 @@
     NSURL *url = [NSURL URLWithString:self.contentItem.urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
-    self.webView.backgroundColor = [UIColor greenColor];
+    self.webView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.webView];
 }
 
@@ -70,6 +70,11 @@
     item.byLine = self.contentItem.byLine;
     item.imageURLString = self.contentItem.imageURLString;
     [defaultStack saveContext];
+}
+
+- (void) prepareSaveButton{
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveContent)];
+    self.navigationItem.rightBarButtonItem = saveButton;
 }
 
 @end
