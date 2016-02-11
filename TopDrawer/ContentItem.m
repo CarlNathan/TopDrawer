@@ -17,6 +17,7 @@
     newItem.byLine = item.byLine;
     newItem.urlString = item.urlString;
     newItem.imageURLString = item.imageURLString;
+    newItem.isSaved = YES;
     
     return newItem;
 }

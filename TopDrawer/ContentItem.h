@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *imageURLString;
 @property (strong, nonatomic) NSString *urlString;
+@property (assign, nonatomic) BOOL isSaved;
 
 + (instancetype) contentItemFromSavedContentItem: (SavedContentItem *) item;
 

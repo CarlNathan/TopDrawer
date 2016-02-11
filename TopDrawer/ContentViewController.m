@@ -34,6 +34,11 @@
     
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.previewViewController.contentCollectionView reloadData];
+}
+
 - (void) viewDidLayoutSubviews {
     CGSize size = self.view.frame.size;
     self.sourceViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, SOURCE_LAYOUT_HEIGHT);
@@ -72,10 +77,9 @@
     [content didMoveToParentViewController:self];
 }
 
-- (void) launchDetailController: (ContentItem *) contentItem source: (Source *) source{
+- (void) launchDetailController: (ContentItem *) contentItem {
     DetailViewController *detail = [[DetailViewController alloc] init];
     detail.contentItem = contentItem;
-    detail.source = source;
     [self.navigationController pushViewController:detail animated:YES];
 }
 
@@ -87,7 +91,8 @@
 }
 
 - (void) contentWasSeleted: (ContentItem *) item source: (Source *) source{
-    [self launchDetailController:item source:source];
+    
+    [self launchDetailController:item];
 }
 
 @end

@@ -60,7 +60,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PreviewCell *previewCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"contentCell" forIndexPath:indexPath];
     
-    ContentItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    SavedContentItem *savedItem = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    ContentItem *item = [ContentItem contentItemFromSavedContentItem:savedItem];
     previewCell.contentItem = item;
     return previewCell;
 }

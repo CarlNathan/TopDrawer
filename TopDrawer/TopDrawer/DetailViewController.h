@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) ContentItem *contentItem;
 @property (strong, nonatomic) Source *source;
+@property (assign, nonatomic) BOOL shouldShowSave;
 
 @end

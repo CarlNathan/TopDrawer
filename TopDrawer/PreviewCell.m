@@ -19,6 +19,7 @@
 @property (strong, nonatomic) UILabel *byLineLabel;
 @property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UILabel *dateLabel;
+@property (strong, nonatomic) UIView *savedMarker;
 
 @end
 
@@ -32,13 +33,16 @@
         _byLineLabel = [[UILabel alloc] init];
         _titleLabel = [[UILabel alloc] init];
         _dateLabel = [[UILabel alloc] init];
+        _savedMarker = [[UIView alloc] init];
         
         self.contentView.backgroundColor = [UIColor whiteColor];
-        self.byLineLabel.textColor = [UIColor whiteColor];
+        self.byLineLabel.textColor = [UIColor grayColor];
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.numberOfLines = 2;
         self.contentView.backgroundColor = [UIColor blackColor];
-        self.dateLabel.textColor = [UIColor whiteColor];
+        self.dateLabel.textColor = [UIColor grayColor];
+        self.savedMarker.layer.masksToBounds = YES;
+        self.savedMarker.layer.cornerRadius = 5;
         
         [self.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:18]];
         [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:11]];
@@ -48,6 +52,7 @@
         [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.byLineLabel];
         [self.contentView addSubview:self.dateLabel];
+        [self.contentView addSubview:self.savedMarker];
         
                 
     }
@@ -60,6 +65,7 @@
     self.titleLabel.frame = CGRectMake(TITLELABEL_INSET, size.height - (GRADIENT_HEIGHT) , size.width - 2 * TITLELABEL_INSET, 60);
     self.byLineLabel.frame = CGRectMake(TITLELABEL_INSET, size.height - (GRADIENT_HEIGHT) + 35, size.width - 2 * TITLELABEL_INSET, 50);
     self.dateLabel.frame = CGRectMake(TITLELABEL_INSET, size.height - GRADIENT_HEIGHT + 60, size.width - 2 * TITLELABEL_INSET, 30);
+    self.savedMarker.frame = CGRectMake(10, 10, 10, 10);
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(0, size.height - (size.height - self.imageView.frame.size.height) - GRADIENT_HEIGHT, self.contentView.frame.size.width, GRADIENT_HEIGHT);
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor clearColor] CGColor], (id)[[UIColor blackColor] CGColor], nil];
@@ -77,11 +83,15 @@
         self.titleLabel.text = self.contentItem.title;
         self.byLineLabel.text = self.contentItem.byLine;
         self.dateLabel.text = self.contentItem.date;
+        if (self.contentItem.isSaved) {
+            self.savedMarker.backgroundColor = [UIColor redColor];
+        }
     }];
 }
 
 - (void) prepareForReuse {
     self.imageView.image = nil;
+    self.savedMarker.backgroundColor = [UIColor clearColor];
 }
 
 @end

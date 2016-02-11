@@ -9,11 +9,14 @@
 #import "PreviewViewController.h"
 #import "PreviewCell.h"
 #import "ContentItem.h"
+#import "CoreDataStack.h"
 
 
-@interface PreviewViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface PreviewViewController () <UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) Source *source;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 
 @end
 
@@ -85,6 +88,48 @@
     [SourceModel objectsForSource:source completion:^(NSArray *content) {
         self.contentArray = content;
         [self.contentCollectionView reloadData];
+        [self markSavedItems];
     }];
 }
+
+- (void) markSavedItems {
+    
+    NSArray *savedItems = [self.fetchedResultsController fetchedObjects];
+    
+    for (SavedContentItem *savedContent in savedItems) {
+        for (ContentItem *newContent in self.contentArray) {
+            if ([savedContent.urlString isEqualToString:newContent.urlString]) {
+                newContent.isSaved = YES;
+            }
+        }
+    }
+}
+
+#pragma mark - FetchDelegate
+
+- (NSFetchRequest *)entryListFetchRequest {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"SavedContentItem"];
+    
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
+    return fetchRequest;
+}
+
+- (NSFetchedResultsController *) fetchedResultsController {
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    NSFetchRequest *fetchRequest = [self entryListFetchRequest];
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    NSError *err = nil;
+    if(![_fetchedResultsController performFetch:&err]) {
+        // todo: erroor handling
+    }
+    return _fetchedResultsController;
+    
+}
+
+
 @end
