@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ColorPallete.h"
+
 
 @interface AppDelegate ()
 
@@ -21,15 +23,29 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     ContentViewController *contentViewController = [[ContentViewController alloc] init];
-    contentViewController.title = @"Content";
+    contentViewController.title = @"FEED";
     UINavigationController *contentNav = [[UINavigationController alloc] initWithRootViewController:contentViewController];
     
     SavedDrawerViewController *savedDrawerController = [[SavedDrawerViewController alloc] init];
-    savedDrawerController.title = @"Saved";
+    savedDrawerController.title = @"My Drawer";
     UINavigationController *savedNav = [[UINavigationController alloc] initWithRootViewController:savedDrawerController];
+    
+    
+    savedNav.tabBarItem.image = [UIImage imageNamed:@"Save as-50.png"];
+    contentNav.tabBarItem.image = [UIImage imageNamed:@"News-50.png"];
+    savedNav.navigationBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
+    contentNav.navigationBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
+
+    
+    tabBarController.tabBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
+    tabBarController.tabBar.tintColor = [ColorPallete defaultColorPallete].primaryColor;
+    
+    
     
     NSArray *array = @[contentNav, savedNav];
     tabBarController.viewControllers = array;
+    
+    
     
     [self.window makeKeyAndVisible];
     self.window.rootViewController = tabBarController;

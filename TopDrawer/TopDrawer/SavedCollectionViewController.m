@@ -33,7 +33,7 @@
 - (void) prepareCollectionView {
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(300, 300);
+    flowLayout.itemSize = CGSizeMake(200, 200);
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];

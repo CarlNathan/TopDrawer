@@ -35,6 +35,9 @@
 		ED2C89D81C694B8900211018 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89D71C694B8900211018 /* DownloadManager.m */; };
 		ED2C89DB1C695C1A00211018 /* SourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C89DA1C695C1A00211018 /* SourceModel.m */; };
 		ED2C89DD1C695D8D00211018 /* nyt-t-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */; };
+		EDF0CE3B1C6D7C2B00792CF6 /* Save as-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF0CE3A1C6D7C2B00792CF6 /* Save as-50.png */; };
+		EDF0CE3D1C6D7E0A00792CF6 /* News-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF0CE3C1C6D7E0A00792CF6 /* News-50.png */; };
+		EDF0CE3F1C6D8A2E00792CF6 /* gradient-wallpaper-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDF0CE3E1C6D8A2E00792CF6 /* gradient-wallpaper-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		ED2C89D91C695C1A00211018 /* SourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceModel.h; sourceTree = "<group>"; };
 		ED2C89DA1C695C1A00211018 /* SourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceModel.m; sourceTree = "<group>"; };
 		ED2C89DC1C695D8D00211018 /* nyt-t-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nyt-t-logo.png"; sourceTree = "<group>"; };
+		EDF0CE3A1C6D7C2B00792CF6 /* Save as-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Save as-50.png"; sourceTree = "<group>"; };
+		EDF0CE3C1C6D7E0A00792CF6 /* News-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News-50.png"; sourceTree = "<group>"; };
+		EDF0CE3E1C6D8A2E00792CF6 /* gradient-wallpaper-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gradient-wallpaper-1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,9 @@
 				ED2C897C1C68FF0E00211018 /* LaunchScreen.storyboard */,
 				ED1AE7371C6A728300D19A00 /* Model.xcdatamodeld */,
 				ED2C897F1C68FF0E00211018 /* Info.plist */,
+				EDF0CE3A1C6D7C2B00792CF6 /* Save as-50.png */,
+				EDF0CE3C1C6D7E0A00792CF6 /* News-50.png */,
+				EDF0CE3E1C6D8A2E00792CF6 /* gradient-wallpaper-1.jpg */,
 				ED2C896E1C68FF0E00211018 /* Supporting Files */,
 			);
 			path = TopDrawer;
@@ -414,7 +423,10 @@
 				ED2C897E1C68FF0E00211018 /* LaunchScreen.storyboard in Resources */,
 				ED2C897B1C68FF0E00211018 /* Assets.xcassets in Resources */,
 				ED2C89DD1C695D8D00211018 /* nyt-t-logo.png in Resources */,
+				EDF0CE3B1C6D7C2B00792CF6 /* Save as-50.png in Resources */,
 				ED1AE7531C6CD66F00D19A00 /* App hard disk.png in Resources */,
+				EDF0CE3F1C6D8A2E00792CF6 /* gradient-wallpaper-1.jpg in Resources */,
+				EDF0CE3D1C6D7E0A00792CF6 /* News-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
