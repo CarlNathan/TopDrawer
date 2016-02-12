@@ -11,7 +11,7 @@
 #import "PreviewViewController.h"
 #import "DetailViewController.h"
 #import "ContentItem.h"
-#import "SourceViewController.h"
+#import "V8HorizontalPickerView.h"
 
 #define MINIMUM_ITEM_SPACING 2
 #define EDGE_INSET_SYMETRIC 2
@@ -19,16 +19,19 @@
 #define SOURCE_LAYOUT_HEIGHT 40
 #define BAR_HEIGHT 56
 
-@interface ContentViewController () <UICollectionViewDelegate, ParentDelegate, PreviewParentDelegate>
+@interface ContentViewController () <UICollectionViewDelegate, PreviewParentDelegate, V8HorizontalPickerViewDataSource, V8HorizontalPickerViewDelegate>
 
-@property (strong, nonatomic) SourceViewController *sourceViewController;
+@property (strong, nonatomic) V8HorizontalPickerView *sourceViewController;
 @property (strong, nonatomic) PreviewViewController *previewViewController;
+@property (strong, nonatomic) SourceModel *sourceModel;
 
 @end
 
 @implementation ContentViewController
 
 - (void) viewDidLoad {
+    self.sourceModel = [[SourceModel alloc] init];
+    self.sourceModel.sourceNames = [self.sourceModel sourceTitles];
     [self preparePreviewView];
     [self prepareSourceView];
     
@@ -41,13 +44,10 @@
 
 - (void) viewDidLayoutSubviews {
     CGSize size = self.view.frame.size;
-    self.sourceViewController.view.frame = CGRectMake(0, BAR_HEIGHT, size.width, SOURCE_LAYOUT_HEIGHT);
-    self.sourceViewController.sourceCollectionView.frame = CGRectMake(0, 0, size.width, SOURCE_LAYOUT_HEIGHT);
+    self.sourceViewController.frame = CGRectMake(0, BAR_HEIGHT, size.width, SOURCE_LAYOUT_HEIGHT);
     self.previewViewController.view.frame = CGRectMake(0, BAR_HEIGHT + SOURCE_LAYOUT_HEIGHT, size.width, size.height-SOURCE_LAYOUT_HEIGHT-BAR_HEIGHT - BAR_HEIGHT);
     self.previewViewController.contentCollectionView.frame = CGRectMake(0, 0, size.width, size.height-BAR_HEIGHT - SOURCE_LAYOUT_HEIGHT - BAR_HEIGHT);
-    [self.sourceViewController.sourceCollectionView invalidateIntrinsicContentSize];
     [self.previewViewController.contentCollectionView invalidateIntrinsicContentSize];
-    self.sourceViewController.sourceCollectionView.pagingEnabled = YES;
 
 
 
@@ -56,9 +56,16 @@
 
 - (void) prepareSourceView {
     
-    self.sourceViewController = [[SourceViewController alloc] init];
-    self.sourceViewController.parent = self;
-    [self displayContentController:self.sourceViewController];
+    self.sourceViewController = [[V8HorizontalPickerView alloc] init];
+    self.sourceViewController.dataSource = self;
+    self.sourceViewController.delegate = self;
+    self.sourceViewController.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:64.0/255.0 blue:128.0/255.0 alpha:1.0];
+    self.sourceViewController.textColor = [UIColor whiteColor];
+    self.sourceViewController.selectedTextColor = [UIColor whiteColor];
+    self.sourceViewController.indicatorPosition = V8HorizontalPickerIndicatorBottom;
+    self.sourceViewController.elementFont = [UIFont fontWithName:@"Helvetica Neue Light" size:14];
+    self.sourceViewController.selectionPoint = CGPointMake(self.view.center.x, 0);
+    [self.view addSubview:self.sourceViewController];
     
 }
 
@@ -94,5 +101,28 @@
     
     [self launchDetailController:item];
 }
+
+#pragma Mark -- V8 horozontal picker view
+
+- (NSInteger)numberOfElementsInHorizontalPickerView:(V8HorizontalPickerView *)picker
+{
+    return self.sourceModel.sourceList.count;
+}
+
+- (NSInteger)horizontalPickerView:(V8HorizontalPickerView *)picker widthForElementAtIndex:(NSInteger)index
+{
+    return 150;
+}
+
+- (NSString *)horizontalPickerView:(V8HorizontalPickerView *)picker titleForElementAtIndex:(NSInteger)index
+{
+    return self.sourceModel.sourceNames[index];
+}
+
+- (void)horizontalPickerView:(V8HorizontalPickerView *)picker didSelectElementAtIndex:(NSInteger)index
+{
+    [self.previewViewController updateContentDataForSource: self.sourceModel.sourceList[index]];
+}
+
 
 @end

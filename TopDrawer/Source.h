@@ -12,9 +12,8 @@
 @interface Source : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) UIImage *image;
-@property (strong, nonatomic) NSString *apiURL;
+@property (strong, nonatomic) NSString *RSSURL;
 
-- (instancetype) initWithName: (NSString *) name image: (UIImage *) image apiURL: (NSString *) apiURL;
+- (instancetype) initWithName: (NSString *) name RSSURL: (NSString *) RSSURL;
 
 @end

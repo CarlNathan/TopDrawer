@@ -1,0 +1,19 @@
+PODS:
+  - DropdownMenu (1.0.0)
+  - hpple (0.2.0)
+  - SDSegmentedControl (1.0.4)
+  - V8HorizontalPickerView (1.0.0)
+
+DEPENDENCIES:
+  - DropdownMenu
+  - hpple (~> 0.2)
+  - SDSegmentedControl
+  - V8HorizontalPickerView
+
+SPEC CHECKSUMS:
+  DropdownMenu: 5777e17ac6ddbc69b151719b83a838da81440786
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  SDSegmentedControl: 268239cca96710be486efb0ad96d2838a60b90c5
+  V8HorizontalPickerView: 6451e226ea7939c3499cefbbc0dcab85c941c28c
+
+COCOAPODS: 0.39.0

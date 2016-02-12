@@ -10,17 +10,15 @@
 #import "ContentItem.h"
 #import "Source.h"
 
-#define API_BASE = @"https://service.com/api/"
-
 @implementation DownloadManager
 
 + (void) contentForSource: (Source *) source completion:(void(^)(NSDictionary *content))completion {
     
-   if (source.apiURL == nil || completion == nil) {
+   if (source.RSSURL == nil || completion == nil) {
        return;
    }
     
-    NSString *urlString = source.apiURL;
+    NSString *urlString = source.RSSURL;
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -39,7 +37,15 @@
     }];
     
     
-    [task resume];}
+    [task resume];
+}
+
++ (void) rssContentForSource: (Source *) source completion:(void(^)(NSArray *content))completion {
+    
+    
+}
+
+    
 
 + (void)imageForPhoto:(NSString *)urlString completion:(void(^)(UIImage *image))completion{
     

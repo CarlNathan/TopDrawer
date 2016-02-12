@@ -13,7 +13,10 @@
 @interface SourceModel : NSObject
 
 @property (strong, nonatomic) NSArray *sourceList;
+@property (strong, nonatomic) NSArray *sourceNames;
 
 + (void) objectsForSource: (Source *) source completion:(void(^)(NSArray *content))completion;
+
+- (NSArray *) sourceTitles;
 
 @end

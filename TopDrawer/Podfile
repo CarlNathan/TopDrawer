@@ -1,0 +1,20 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'TopDrawer' do
+pod 'hpple', '~> 0.2'
+pod 'DropdownMenu'
+pod 'V8HorizontalPickerView'
+pod 'SDSegmentedControl'
+end
+
+target 'TopDrawerTests' do
+
+end
+
+target 'TopDrawerUITests' do
+
+end
+

@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSString *urlString;
 @property (assign, nonatomic) BOOL isSaved;
 
+- (instancetype)initWithTitle: (NSString *) title byLine: (NSString *) byLine date: (NSString *) date imageUrlString: (NSString *) imageurlString urlString: (NSString *) urlString;
+
 + (instancetype) contentItemFromSavedContentItem: (SavedContentItem *) item;
 
 @end

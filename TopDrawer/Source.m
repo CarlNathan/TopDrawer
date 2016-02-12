@@ -10,12 +10,11 @@
 
 @implementation Source
 
-- (instancetype) initWithName: (NSString *) name image: (UIImage *) image apiURL: (NSString *) apiURL{
+- (instancetype) initWithName: (NSString *) name RSSURL: (NSString *) RSSURL{
     self = [super init];
     if (self) {
         _name = name;
-        _image = image;
-        _apiURL = apiURL;
+        _RSSURL = RSSURL;
     }
     return self;
 }

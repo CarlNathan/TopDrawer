@@ -30,6 +30,7 @@
     
 }
 
+
 #pragma Mark -- CollectionView Data Source
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -40,7 +41,7 @@
     SourceCell *sourceCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"sourceCell" forIndexPath:indexPath];
     
     Source *source = (Source *)self.sourceArray[indexPath.row];
-    sourceCell.imageView.image = source.image;
+    //sourceCell.imageView.image = source.image;
     
     return sourceCell;
 }

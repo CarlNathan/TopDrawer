@@ -9,23 +9,45 @@
 #import "SourceModel.h"
 #import "DownloadManager.h"
 
-#define NEW_YORK_TIMES @"New York Times"
+#define NPR @"NPR"
+#define CBC @"CBC"
+#define WIRED @"Wired"
 
 @implementation SourceModel
 
-- (instancetype) init{
-    self= [super init];
-    if (self) {
-        Source *newYorkTimes = [[Source alloc] initWithName:NEW_YORK_TIMES
-                                                      image:[UIImage imageNamed:@"nyt-t-logo.png"] apiURL:@"http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=58ac93c3598fde59d0ab4a2b08a5393f:11:74337065"];
+- (instancetype) init {
+    self = [super init];
+    if (self){
+        Source *npr = [[Source alloc] initWithName:NPR RSSURL:@"http://www.npr.org/rss/rss.php?id=1001"];
+        Source *cbc = [[Source alloc] initWithName:CBC RSSURL:@"http://www.cbc.ca/cmlink/rss-topstories"];
+        Source *wired = [[Source alloc] initWithName:WIRED RSSURL:@"http://feeds.wired.com/wired/index"];
         
-        _sourceList = @[newYorkTimes];
+        _sourceList = @[npr, cbc, wired];
     }
     return self;
 }
 
+//- (instancetype) init{
+//    self= [super init];
+//    if (self) {
+//        Source *newYorkTimes = [[Source alloc] initWithName:NEW_YORK_TIMES
+//                                                      image:[UIImage imageNamed:@"nyt-t-logo.png"] apiURL:@"http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=58ac93c3598fde59d0ab4a2b08a5393f:11:74337065"];
+//        
+//        _sourceList = @[newYorkTimes];
+//    }
+//    return self;
+//}
+
+- (NSArray *) sourceTitles {
+    NSMutableArray *titles = [[NSMutableArray alloc] init];
+    for (Source *source in self.sourceList) {
+        [titles addObject:source.name];
+    }
+    return [titles copy];
+}
+
 + (void) objectsForSource: (Source *) source completion:(void(^)(NSArray *content))completion{
-    [DownloadManager contentForSource:source completion:^(NSDictionary *content){
+    [DownloadManager rssContentForSource:source completion:^(NSArray *content){
         NSDictionary *jsonResults = content;
         
         NSArray *contentList = [NSArray new];

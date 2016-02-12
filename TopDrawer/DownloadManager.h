@@ -11,7 +11,7 @@
 
 @interface DownloadManager : NSObject
 
-+ (void) contentForSource: (Source *) source completion:(void(^)(NSDictionary *content))completion;
++ (void) rssContentForSource: (Source *) source completion:(void(^)(NSArray *content))completion;
 
 + (void)imageForPhoto:(NSString *)urlString completion:(void(^)(UIImage *image))completion;
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34096A6BAF81D8D5C50357A6 /* libPods-TopDrawer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00408AFA59866FF6C06C2CCF /* libPods-TopDrawer.a */; };
 		ED1AE72F1C6A4BA100D19A00 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE72E1C6A4BA100D19A00 /* HeaderView.m */; };
 		ED1AE7321C6A6C4900D19A00 /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7311C6A6C4900D19A00 /* SideView.m */; };
 		ED1AE7361C6A712700D19A00 /* SavedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1AE7351C6A712700D19A00 /* SavedCollectionViewController.m */; };
@@ -55,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00408AFA59866FF6C06C2CCF /* libPods-TopDrawer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TopDrawer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2254403401F7F50452EC290D /* Pods-TopDrawer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopDrawer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopDrawer/Pods-TopDrawer.debug.xcconfig"; sourceTree = "<group>"; };
+		C3A4ED0A0DA555C97BDCA1DC /* Pods-TopDrawer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopDrawer.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopDrawer/Pods-TopDrawer.release.xcconfig"; sourceTree = "<group>"; };
 		ED1AE72D1C6A4BA100D19A00 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderView.h; path = ../HeaderView.h; sourceTree = "<group>"; };
 		ED1AE72E1C6A4BA100D19A00 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderView.m; path = ../HeaderView.m; sourceTree = "<group>"; };
 		ED1AE7301C6A6C4900D19A00 /* SideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideView.h; path = ../SideView.h; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34096A6BAF81D8D5C50357A6 /* libPods-TopDrawer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414562AFBE3E63A01E94EAC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2254403401F7F50452EC290D /* Pods-TopDrawer.debug.xcconfig */,
+				C3A4ED0A0DA555C97BDCA1DC /* Pods-TopDrawer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BBA4920A592FF287B19C611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00408AFA59866FF6C06C2CCF /* libPods-TopDrawer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED1AE7331C6A6C6C00D19A00 /* SideView */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +174,8 @@
 				ED2C89871C68FF0E00211018 /* TopDrawerTests */,
 				ED2C89921C68FF0E00211018 /* TopDrawerUITests */,
 				ED2C896C1C68FF0E00211018 /* Products */,
+				414562AFBE3E63A01E94EAC4 /* Pods */,
+				9BBA4920A592FF287B19C611 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,9 +339,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2C89981C68FF0E00211018 /* Build configuration list for PBXNativeTarget "TopDrawer" */;
 			buildPhases = (
+				924A9CD6A45BF2C4FEAF6742 /* Check Pods Manifest.lock */,
 				ED2C89671C68FF0E00211018 /* Sources */,
 				ED2C89681C68FF0E00211018 /* Frameworks */,
 				ED2C89691C68FF0E00211018 /* Resources */,
+				EAC1942FB360D1FB69FAF7FA /* Embed Pods Frameworks */,
+				FF26D8EAF9C82F4C05432693 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,6 +460,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		924A9CD6A45BF2C4FEAF6742 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC1942FB360D1FB69FAF7FA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopDrawer/Pods-TopDrawer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF26D8EAF9C82F4C05432693 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopDrawer/Pods-TopDrawer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED2C89671C68FF0E00211018 /* Sources */ = {
@@ -589,6 +664,7 @@
 		};
 		ED2C89991C68FF0E00211018 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2254403401F7F50452EC290D /* Pods-TopDrawer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TopDrawer/Info.plist;
@@ -600,6 +676,7 @@
 		};
 		ED2C899A1C68FF0E00211018 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3A4ED0A0DA555C97BDCA1DC /* Pods-TopDrawer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TopDrawer/Info.plist;

@@ -32,7 +32,7 @@
     header.source = source;
     
     header.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    header.imageView.image = source.image;
+    //header.imageView.image = source.image;
     header.imageView.backgroundColor = [UIColor whiteColor];
     [header addSubview:header.imageView];
     
