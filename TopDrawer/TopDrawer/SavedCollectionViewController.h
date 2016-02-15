@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CoreDataStack.h"
 #import "SavedContentItem.h"
+#import "ContentItem.h"
 
 @protocol savedCollectionViewControllerDelegate <NSObject>
 
@@ -21,6 +22,8 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (weak, nonatomic) id <savedCollectionViewControllerDelegate> delegate;
+
+- (void) deleteObject: (ContentItem *) contentItem;
 
 
 @end

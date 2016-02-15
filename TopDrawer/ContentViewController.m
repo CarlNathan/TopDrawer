@@ -17,7 +17,7 @@
 #define EDGE_INSET_SYMETRIC 2
 #define HEADER_HEIGHT 20
 #define SOURCE_LAYOUT_HEIGHT 40
-#define BAR_HEIGHT 56
+#define BAR_HEIGHT 0
 
 @interface ContentViewController () <UICollectionViewDelegate, ParentDelegate, PreviewParentDelegate>
 

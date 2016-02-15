@@ -30,16 +30,29 @@
     savedDrawerController.title = @"My Drawer";
     UINavigationController *savedNav = [[UINavigationController alloc] initWithRootViewController:savedDrawerController];
     
+    [savedNav.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:18]}];
+    [contentNav.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:18]}];
+    
     
     savedNav.tabBarItem.image = [UIImage imageNamed:@"Save as-50.png"];
     contentNav.tabBarItem.image = [UIImage imageNamed:@"News-50.png"];
     savedNav.navigationBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
     contentNav.navigationBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
+    
+   tabBarController.tabBar.tintColor = [UIColor grayColor];
+    
+    [contentNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"M6962Xw.png"]forBarMetrics:UIBarMetricsDefault];
+    [savedNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"M6962Xw.png"]forBarMetrics:UIBarMetricsDefault];
 
+    [tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"M6962Xw.png"]];
+    tabBarController.tabBar.layer.masksToBounds = YES;
     
-    tabBarController.tabBar.barTintColor = [ColorPallete defaultColorPallete].secondaryColor;
-    tabBarController.tabBar.tintColor = [ColorPallete defaultColorPallete].primaryColor;
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
+    savedNav.navigationBar.tintColor = [UIColor grayColor];
+    contentNav.navigationBar.tintColor = [UIColor grayColor];
     
     
     NSArray *array = @[contentNav, savedNav];

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewController.h"
 
-@interface SavedDrawerViewController : UIViewController
+@interface SavedDrawerViewController : UIViewController <detailViewDeleteDelegate>
+
+- (void) deleteObject: (ContentItem *) contentItem;
 
 @end

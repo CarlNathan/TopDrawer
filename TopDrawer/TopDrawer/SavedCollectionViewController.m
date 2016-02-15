@@ -8,6 +8,7 @@
 
 #import "SavedCollectionViewController.h"
 #import "PreviewCell.h"
+#import "SavedContentItem.h"
 
 @interface SavedCollectionViewController () <NSFetchedResultsControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -48,6 +49,18 @@
     
     [self.view addSubview:self.collectionView];
     
+}
+
+- (void) deleteObject:(ContentItem *)contentItem{
+    
+    for (SavedContentItem *savedContent in [self.fetchedResultsController fetchedObjects]) {
+        if ([savedContent.urlString isEqualToString:contentItem.urlString]) {
+            CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+            [[coreDataStack managedObjectContext] deleteObject:savedContent];
+            [coreDataStack saveContext];
+
+            }
+        }
 }
 
 #pragma Mark - Collection View Data Source

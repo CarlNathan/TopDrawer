@@ -12,7 +12,7 @@
 #import "SavedContentItem.h"
 
 #define HEADER_HEIGHT 80
-#define BAR_HEIGHT 64
+#define BAR_HEIGHT 0
 
 @interface DetailViewController () <UIWebViewDelegate, UIScrollViewDelegate>
 
@@ -74,13 +74,17 @@
     item.imageURLString = self.contentItem.imageURLString;
     [defaultStack saveContext];
     self.contentItem.isSaved = YES;
-    self.navigationItem.rightBarButtonItem = nil;
+    [self prepareSaveButton];
     [self showSavedAnimation];
 }
+
 
 - (void) prepareSaveButton{
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveContent)];
     if (!self.contentItem.isSaved) {
+        self.navigationItem.rightBarButtonItem = saveButton;
+    } else if (self.contentItem.isSaved){
+        UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStylePlain target:self action:@selector(deleteContent)];
         self.navigationItem.rightBarButtonItem = saveButton;
     }
 }
@@ -95,13 +99,16 @@
 - (void) showSavedAnimation {
     
     self.savedAnimationView.alpha = 0.7;
-    [UIView animateWithDuration:1.0 animations:^{
-        self.savedAnimationView.alpha = 0.7;
-    }];
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.savedAnimationView.alpha = 0;
-    }];
+    } completion:nil];
 
+}
+
+- (void) deleteContent {
+    [self.deleteDelegate deleteObject: self.contentItem];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    self.contentItem.isSaved = NO;
 }
 
 @end

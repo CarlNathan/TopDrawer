@@ -37,7 +37,7 @@
     CGSize size = self.frame.size;
     self.imageView.backgroundColor = [UIColor whiteColor];
     self.imageView.frame = CGRectMake(0, 0, SOURCE_ICON_SIZE, SOURCE_ICON_SIZE);
-    self.imageView.center = CGPointMake(size.width/2, size.height/2 + 4);
+    self.imageView.center = CGPointMake(size.width/2, size.height/2);
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(0, 0, size.width, GRADIENT_HEIGHT);

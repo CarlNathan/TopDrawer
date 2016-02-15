@@ -10,9 +10,8 @@
 #import "SavedCollectionViewController.h"
 #import "PreviewView.h"
 #import "SavedContentItem.h"
-#import "DetailViewController.h"
 
-#define BAR_HEIGHT 64
+#define BAR_HEIGHT 0
 #define COLLECTION_VIEW_HEIGHT_LOWERED 200
 
 @interface SavedDrawerViewController () <UICollectionViewDelegate, savedCollectionViewControllerDelegate>
@@ -98,7 +97,13 @@
 - (void) previewWasTapped {
     DetailViewController *detail = [[DetailViewController alloc] init];
     detail.contentItem = [ContentItem contentItemFromSavedContentItem:self.previewView.contentItem];
+    detail.deleteDelegate = self;
     [self.navigationController pushViewController:detail animated:YES];
 }
+
+- (void) deleteObject: (ContentItem *) contentItem{
+    [self.collectionViewController deleteObject: contentItem];
+}
+
 
 @end

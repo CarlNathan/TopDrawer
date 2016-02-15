@@ -30,6 +30,10 @@
     [self updateContentDataForSource:self.sourceModel.sourceList[0]];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [self updateContentDataForSource:self.sourceModel.sourceList[0]];
+}
+
 - (void) viewDidLayoutSubviews {
     //self.contentCollectionView.frame = self.view.frame;
 }
@@ -95,6 +99,7 @@
 - (void) markSavedItems {
     
     NSArray *savedItems = [self.fetchedResultsController fetchedObjects];
+    
     
     for (SavedContentItem *savedContent in savedItems) {
         for (ContentItem *newContent in self.contentArray) {
